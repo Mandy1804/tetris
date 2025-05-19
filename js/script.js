@@ -174,7 +174,7 @@
     }
 
     let dropCounter = 0;
-    let dropInterval = 1000; // Velocidade inicial
+    let dropInterval = 1000; 
     let lastTime = 0;
     let speedIncreased = false;
 
@@ -183,9 +183,8 @@
         lastTime = time;
         dropCounter += deltaTime;
 
-        // Verifica se precisa aumentar a velocidade
         if (score >= 50 && !speedIncreased) {
-            dropInterval = 300; // Aumenta a velocidade
+            dropInterval = 300;
             speedIncreased = true;
            alert("⚡ Velocidade aumentada ");
         }
