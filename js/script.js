@@ -145,6 +145,7 @@
     }
 
     let score = 0;
+    let scoreVelocidade = 50;
     function arenaSweep() {
         let rowCount = 1;
         outer: for (let y = arena.length - 1; y >= 0; --y) {
@@ -160,6 +161,11 @@
 
             score += rowCount * 10;
             rowCount *= 2;
+
+              if (score >= scoreVelocidade) {
+                    dropInterval = Math.max(50, dropInterval - 200);
+                    scoreVelocidade += 50;
+                    }
         }
     }
 
